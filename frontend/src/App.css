@@ -1,0 +1,269 @@
+/* Global styles */
+.App {
+  text-align: center;
+}
+
+/* Media query for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Define CSS variables for text color in light and dark modes */
+:root {
+  --text-color-light: #333; /* Default text color for light mode */
+  --text-color-dark: #eee; /* Default text color for dark mode */
+}
+
+/* Styles for movie summary */
+.movie-spec {
+  text-align: justify;
+  color: var(--text-color-light); /* Set default text color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --text-color-light: #eee; /* Set text color for light mode */
+  --text-color-dark: #333; /* Set text color for dark mode */
+}
+
+/* Apply dark mode styles when body has dark-mode class */
+body.dark-mode .movie-spec {
+  color: var(--text-color-dark); /* Set text color for dark mode */
+}
+
+/* Define CSS variables for text color in light and dark modes */
+:root {
+  --title-color-light: #c6212e; /* Default title color for light mode */
+  --title-color-dark: #f44336; /* Default title color for dark mode */
+}
+
+/* Styles for movie title */
+.movie-container h2 {
+  font-size: 1.2rem; /* Larger font size for the title */
+  color: var(--title-color-light); /* Set default title color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --title-color-light: #f44336; /* Set title color for light mode */
+  --title-color-dark: #c6212e; /* Set title color for dark mode */
+}
+
+/* Apply dark mode styles when body has dark-mode class */
+body.dark-mode .movie-container h2 {
+  color: var(--title-color-dark); /* Set title color for dark mode */
+}
+
+
+/* Styles for the top bar */
+.appbar {
+  background-color: #282c34; /* Dark background color */
+}
+
+.appbar button {
+  margin: 0 10px; /* Add spacing between buttons */
+  color: white; /* Set button text color to white */
+}
+
+/* Styles for the portal */
+.portal {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for movie containers */
+/* Styles for movie containers */
+/* Styles for movie containers */
+.movie-container {
+  margin: 30px;
+  padding: 23px;
+  width: 280px;
+  box-shadow: 5px 10px 20px rgb(196, 34, 46);
+  border-radius: 10px;
+  background-color: #822323; /* Dark red background color */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange child elements in a column */
+}
+
+
+
+
+/* Ensure the movie poster stays at the top */
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
+}
+
+/* Styles for movie specifications */
+.movie-spec {
+  padding: 10px; /* Add padding to the specifications */
+  flex-grow: 1; /* Allow the summary to grow and occupy remaining space */
+}
+
+/* Styles for movie summary */
+.movie-summary {
+  text-align: justify;
+
+}
+
+/* Styles for movie title */
+.movie-title {
+  font-size: 1.2rem; /* Larger font size for the title */
+  color: #c6212e; /* Red text color for the title */
+}
+
+/* Styles for movie rating */
+.movie-rating {
+  font-size: 1.1rem; /* Slightly smaller font size for the rating */
+  color: #4caf50; /* Green text color for the rating */
+}
+
+/* Styles for movie description */
+.movie-description {
+  margin-top: 10px; /* Add some margin between the title and description */
+
+}
+
+
+
+/* Styles for movie list */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Animation for rotating film reel */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styles for forms */
+/* Styles for forms */
+.addForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Set the form width to 100% */
+  max-width: 600px; /* Set a maximum width for the form */
+  margin: 50px auto 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #f3f3f3; /* Light gray background color */
+  color: var(--text-color-light); /* Set default text color for light mode */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: var(--text-color-dark); /* Set text color for dark mode */
+}
+
+/* Apply dark mode styles when body has dark-mode class */
+body.dark-mode .addForm {
+  background-color: #555; /* Darker background color */
+}
+
+/* Styles for form fields */
+.addForm input,
+.addForm textarea {
+  width: calc(100% - 20px); /* Adjust the width of form fields */
+  padding: 10px; /* Add padding to form fields */
+  margin: 10px; /* Add margin between form fields */
+  border: 1px solid #ccc; /* Add border to form fields */
+  border-radius: 5px; /* Add border radius to form fields */
+  background-color: #fff; /* Set background color for form fields */
+  color: var(--text-color-light); /* Set text color for form fields */
+}
+
+/* Apply dark mode styles to form fields in dark mode */
+body.dark-mode .addForm input,
+body.dark-mode .addForm textarea {
+  background-color: #444; /* Darker background color for form fields in dark mode */
+  color: #fff; /* Set text color for form fields in dark mode */
+  border-color: #888; /* Set border color for form fields in dark mode */
+}
+
+/* Styles for placeholder text */
+.addForm input::placeholder,
+.addForm textarea::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
+/* Apply dark mode styles to placeholder text in dark mode */
+body.dark-mode .addForm input::placeholder,
+body.dark-mode .addForm textarea::placeholder {
+  color: #ddd !important; /* Set placeholder text color in dark mode */
+  opacity: 1 !important; /* Ensure full opacity for placeholder text */
+}
+
+
+
+
+
+
+.addForm .MuiTextField-root {
+  margin-bottom: 20px;
+  width: 100%; /* Make text fields full width */
+}
+
+.addForm h4 {
+  margin-top: 20px;
+  font-size: 1.5rem; /* Larger font size for the heading */
+  color: #c6212e; /* Red text color */
+}
+
+.addForm button {
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 1rem; /* Set button font size */
+  background-color: #61dafb; /* Light blue background color */
+  color: white; /* White text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.addForm button:hover {
+  background-color: #4fa6d3; /* Darker blue background color on hover */
+}
+
+/* Styles for the home page */
+/* Styles for the home page */
+.home {
+  text-align: center;
+  padding: 50px;
+  background-image: url('./filmreel.gif'); /* Set the film reel GIF as the background */
+  background-size: cover; /* Ensure the background covers the entire container */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center; /* Center the background image */
+  height: 100vh; 
+}
+
+.home h1 {
+  margin-bottom: 200px;
+  margin-top: 0px;
+  font-size: 2.5rem;
+  color: #61dafb;
+}
+
+.home p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+
+}
+
+/* Styles for images in the home page */
+.popcorn-img,
+.film-reel-img {
+  margin-top: 30px;
+}
